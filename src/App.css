@@ -1,0 +1,108 @@
+.App {
+  width: 500px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.delete-icon {
+  width: 30px;
+  height: 30px;
+}
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.container-header {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.container-content {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/**
+ * ----------------------------------------
+ *                SEARCH BOX
+ * ----------------------------------------
+ */
+#search {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.input-search {
+  flex: 8;
+  box-sizing: border-box;
+  padding-left: 16px;
+  border: none;
+  outline: none;
+}
+#search:focus-within {
+  border: 2px solid black;
+}
+.input-search::placeholder {
+  color: rgb(109, 109, 109);
+}
+.container-header button {
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container-header button .search-icon {
+  flex: 1;
+  stroke: rgb(193, 193, 193);
+}
+
+/**
+ * ----------------------------------------
+ *                TODO CARD
+ * ----------------------------------------
+ */
+.card-todo {
+  height: 70px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.75rem;
+}
+.todo-check {
+  flex: 1;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.todo-title {
+  flex: 5;
+  text-overflow: ellipsis;
+  /* Must be added when it is flex */
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-todo button {
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card-todo button .delete-icon {
+  flex: 1;
+  stroke: rgb(0, 0, 0);
+}
