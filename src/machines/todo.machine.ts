@@ -1,7 +1,14 @@
-import { sendParent } from "xstate"
+import { ActorRefFrom, sendParent } from "xstate"
 import { createModel } from "xstate/lib/model"
 
 interface Todo extends Omit<ITodo, "ref"> {}
+
+export interface ITodo {
+  id: number;
+  title: string;
+  done: boolean;
+  ref: ActorRefFrom<ReturnType<typeof createTodoMachine>>;
+}
 
 const todoModel = createModel(
   {

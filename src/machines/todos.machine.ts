@@ -1,7 +1,10 @@
 import { assign, createMachine, spawn } from "xstate"
-import createTodoMachine from "./todo.machine"
+import createTodoMachine, { ITodo } from "./todo.machine"
 import localTodos from "../data/todos.json"
 import { createModel } from "xstate/lib/model"
+
+
+
 
 const todosModel = createModel(
   {
@@ -76,7 +79,6 @@ const todosMachine =
     {
       services: {
         fetchTodos: async ctx =>
-          
           (ctx.todosList = localTodos.map(todo => ({
             ...todo,
             ref: spawn(createTodoMachine(todo)),

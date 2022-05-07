@@ -1,5 +1,6 @@
 import { useActor } from "@xstate/react"
 import { FC } from "react"
+import { ITodo } from "../machines/todo.machine"
 import DeleteIcon from "./DeleteIcon"
 
 const Todo: FC<{ todo: ITodo }> = ({ todo }) => {

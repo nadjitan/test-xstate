@@ -1,5 +1,5 @@
 import { useMachine } from "@xstate/react"
-import { FC, Suspense } from "react"
+import { FC } from "react"
 import "./App.css"
 import SearchIcon from "./components/SearchIcon"
 import Todo from "./components/Todo"
